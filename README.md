@@ -10,5 +10,5 @@ Figura_teste2 - câmera a 0.53m de distância da figura e está perpendicular a 
 
   0.0175m largura da fita de teste e 0.02m largura da fita na competição
 
-Par_fita4.0 entregando o resultados parecidos e próximos do esperado
+Par_fitaAtual entregando o resultados parecidos e próximos do esperado
 

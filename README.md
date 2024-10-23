@@ -18,5 +18,5 @@ Par_fita4.0.py
 
 Utilize o manual_cal_video.py para calcular a largura da fita em pixels do Par_fita4.0.py
 
-manual_cal_video.py: Use a tecla Q para pular os frames, arraste o mouse na tela para gerar um retângulo no frame escolhido, depois aperte Q para que o retâgulo apareça
+manual_cal_video.py: Pressione a tecla Q para pular os frames, clique e arraste o mouse na tela para gerar um retângulo no frame escolhido, depois aperte Q para que o retâgulo apareça
 

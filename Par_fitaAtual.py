@@ -44,7 +44,13 @@ def calculate_area_perimeter(edges, threshold_image, tape_width_meters=0.0176): 
             avg_tape_pixel_width = np.mean(tape_pixel_widths)
             med_tape_pixel_width = np.median(tape_pixel_widths)
             max_tape_pixel_width = np.max(tape_pixel_widths)
-            mode_tape_pixel_width = max(set(tape_pixel_widths), key=tape_pixel_widths.count)
+            # Filtra as larguras da fita para encontrar a moda dentro do intervalo desejado
+            filtered_tape_pixel_widths = [width for width in tape_pixel_widths if 6 <= width <= 13]
+            if filtered_tape_pixel_widths:
+                mode_tape_pixel_width = max(set(filtered_tape_pixel_widths), key=filtered_tape_pixel_widths.count)
+            else:
+                print("Nenhuma largura de fita encontrada no intervalo desejado.")
+                return None, None, None, None, None, None
 
             meters_per_pixel = tape_width_meters / mode_tape_pixel_width #tava antes med_tape_pixel_width ou avg_tape_pixel_width
             area_meters = area_pixels * (meters_per_pixel ** 2)
@@ -107,6 +113,9 @@ def main():
         cv2.waitKey(500)
         if cv2.waitKey(30) & 0xFF == ord('q'):
             break
+        #tecla = cv2.waitKey(0) & 0xFF
+        #if tecla == ord('q'):
+        #    continue
 
     cap.release()
     cv2.destroyAllWindows()

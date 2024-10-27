@@ -15,7 +15,7 @@ Entregando o resultados parecidos e próximos do esperado:
 
 Par_fitaAtual - Filtra as figuras baseada na largura da fita, em pixels, dada(necessita usar o manual_cal_video) 
 Par_fitaAtualCom2.0 - Filtra as figuras baseada na largura da fita, em pixels, dada(necessita usar o manual_cal_video) e não há cálculo de erro de área ou perímetro
-Par_fitaAtualCom - Não há cálculo de erro de área ou perímetro
+Par_fitaAtualCom - Procura automaticamente pela largura da fita e não há cálculo de erro de área ou perímetro
 
 Utilize o manual_cal_video.py para calcular a largura da fita em pixels do Par_fitaAtual.py
 

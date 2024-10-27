@@ -57,19 +57,19 @@ def calculate_area_perimeter(edges, threshold_image, tape_width_meters=0.0176): 
     else:
         return None, None, None, None, None, None
 
-def Porcentagem_de_erro(area_calculada, perimetro_calculado):
-    area_real = 0.16 #  metros quadrados
-    perimetro_real = 2.23 # metros
-    erro_area = ((area_real - area_calculada) / area_real) * 100
-    erro_per = ((perimetro_real - perimetro_calculado) / perimetro_real) * 100
-    
-    return erro_area, erro_per
+#def Porcentagem_de_erro(area_calculada, perimetro_calculado):
+#    area_real = 0.16 #  metros quadrados
+#    perimetro_real = 2.23 # metros
+#    erro_area = ((area_real - area_calculada) / area_real) * 100
+#    erro_per = ((perimetro_real - perimetro_calculado) / perimetro_real) * 100
+#    
+#    return erro_area, erro_per
 
 # Função principal
 def main():
     #camera_url = "http://192.168.1.6:4747/video"
     #cap = cv2.VideoCapture(camera_url)
-    cap = cv2.VideoCapture("Video_de_teste_3.mp4")
+    cap = cv2.VideoCapture("Video_de_teste_4.mp4")
     
     while True:
         ret, image = cap.read()
@@ -83,7 +83,7 @@ def main():
         if contours:
             contour = max(contours, key=cv2.contourArea)
         area, perimeter, avg_tape_pixel_width, med_tape_pixel_width, max_tape_pixel_width, mode_tape_pixel_width = calculate_area_perimeter(edges, thresh)
-        erro_area, erro_per = Porcentagem_de_erro(area, perimeter)
+        #erro_area, erro_per = Porcentagem_de_erro(area, perimeter)
 
         if area is not None and perimeter is not None:
             print(f"\nUtilizando a mediana da fita para cálculos:")
@@ -93,8 +93,8 @@ def main():
             print(f"Largura mediana da fita em pixels: {med_tape_pixel_width:.2f}")
             print(f"Maior largura da fita em pixels: {max_tape_pixel_width:.2f}")
             print(f"mode_tape_pixel_width: {mode_tape_pixel_width:.2f}")
-            print(f"Erro de área: {erro_area:.2f}%")
-            print(f"Erro de perímetro: {erro_per:.2f}%\n")
+            #print(f"Erro de área: {erro_area:.2f}%")
+            #print(f"Erro de perímetro: {erro_per:.2f}%\n")
         else:
             print("Nenhuma figura detectada.")
         
@@ -104,9 +104,10 @@ def main():
         cv2.imshow("Imagem com Contorno", final_image)
         cv2.imshow('Imagem Original', image)
         cv2.imshow('Imagem com Contornos', edges)
-        cv2.waitKey(500)
-        if cv2.waitKey(30) & 0xFF == ord('q'):
-            break
+        #cv2.waitKey(500)
+        tecla = cv2.waitKey(0) & 0xFF
+        if tecla == ord('q'):
+            continue
 
     cap.release()
     cv2.destroyAllWindows()

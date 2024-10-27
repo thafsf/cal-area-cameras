@@ -92,7 +92,7 @@ def main():
 
         if area is not None and perimeter is not None:
             erro_area, erro_per = Porcentagem_de_erro(area, perimeter)
-            print(f"\nUtilizando a mediana da fita para cálculos:")
+            print(f"\nUtilizando a moda da fita para cálculos:")
             print(f"\nÁrea: {area:.6f} metros quadrados")
             print(f"Perímetro: {perimeter:.6f} metros")
             print(f"Largura média da fita em pixels: {avg_tape_pixel_width:.2f}")

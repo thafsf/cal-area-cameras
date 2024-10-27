@@ -13,9 +13,9 @@ Figura_teste2 - câmera a 0.53m de distância da figura e está perpendicular a 
 
 Entregando o resultados parecidos e próximos do esperado:
 
-Par_fitaAtual
-Par_fitaAtual2.0
-Par_fitaAtualCom
+Par_fitaAtual - Filtra as figuras baseada na largura da fita, em pixels, dada(necessita usar o manual_cal_video) 
+Par_fitaAtualCom2.0 - Filtra as figuras baseada na largura da fita, em pixels, dada(necessita usar o manual_cal_video) e não há cálculo de erro de área ou perímetro
+Par_fitaAtualCom - Não há cálculo de erro de área ou perímetro
 
 Utilize o manual_cal_video.py para calcular a largura da fita em pixels do Par_fitaAtual.py
 

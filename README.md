@@ -14,7 +14,8 @@ Figura_teste2 - câmera a 0.53m de distância da figura e está perpendicular a 
 Entregando o resultados parecidos e próximos do esperado:
 
 Par_fitaAtual
-Par_fita4.0.py
+Par_fitaAtual2.0
+Par_fitaAtualCom
 
 Utilize o manual_cal_video.py para calcular a largura da fita em pixels do Par_fita4.0.py
 

@@ -8,7 +8,7 @@ Figura_teste2 - câmera a 0.53m de distância da figura e está perpendicular a 
 
   Parte de dentro da figura - largura 0.07m e altura 0.05m, área 0.0035m² e perímetro 0.22m
 
-  0.0175m largura da fita de teste e 0.02m largura da fita na competição
+  0.0176m largura da fita de teste e 0.02m largura da fita na competição
 
 
 Entregando o resultados parecidos e próximos do esperado:

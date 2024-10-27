@@ -83,9 +83,9 @@ def main():
         if contours:
             contour = max(contours, key=cv2.contourArea)
         area, perimeter, avg_tape_pixel_width, med_tape_pixel_width, max_tape_pixel_width, mode_tape_pixel_width = calculate_area_perimeter(edges, thresh)
-        erro_area, erro_per = Porcentagem_de_erro(area, perimeter)
 
         if area is not None and perimeter is not None:
+            erro_area, erro_per = Porcentagem_de_erro(area, perimeter)
             print(f"\nUtilizando a mediana da fita para cálculos:")
             print(f"\nÁrea: {area:.6f} metros quadrados")
             print(f"Perímetro: {perimeter:.6f} metros")
